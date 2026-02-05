@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science Exit Exam</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header-modern text-white">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark container">
+        <a class="navbar-brand fw-bold" href="#">
+            <i class="fas fa-laptop-code"></i> CS Exit Exam
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item mx-2">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#exam-section">Exam</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#features">Features</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Content -->
+    <div class="container text-center py-5">
+        <h1 class="display-4 fw-bold text-white text-shadow">Computer Science Exit Exam</h1>
+        <p class="lead mt-3 text-white text-shadow">Test your knowledge with 50 interactive MCQs. Fully responsive and modern design.</p>
+        <a href="#exam-section" id="start-exam-btn" class="btn btn-primary btn-lg mt-3">
+            <i class="fas fa-play-circle"></i> Start Exam
+        </a>
+    </div>
+</header>
+
+
+
+<!-- Hero Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+                <h2 class="display-5 fw-bold">Prepare, Test & Evaluate Yourself</h2>
+                <p class="lead">Take the official Computer Science Exit Exam now. Interactive, fast, and fully online.</p>
+                <a href="#" id="start-exam-btn" class="btn btn-primary btn-lg"><i class="fas fa-play-circle"></i> Start Exam</a>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="https://cdn-icons-png.flaticon.com/512/2921/2921822.png" alt="Computer Science" class="img-fluid rounded hero-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-5">
+    <div class="container text-center">
+        <h3 class="mb-4">Features</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm feature-card">
+                    <div class="card-body">
+                        <i class="fas fa-question-circle fa-3x mb-3 text-primary"></i>
+                        <h5 class="card-title">50 MCQs</h5>
+                        <p class="card-text">Comprehensive questions covering all major Computer Science topics.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm feature-card">
+                    <div class="card-body">
+                        <i class="fas fa-chart-line fa-3x mb-3 text-success"></i>
+                        <h5 class="card-title">Instant Scoring</h5>
+                        <p class="card-text">Get your score immediately after finishing the exam.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm feature-card">
+                    <div class="card-body">
+                        <i class="fas fa-mobile-alt fa-3x mb-3 text-warning"></i>
+                        <h5 class="card-title">Responsive</h5>
+                        <p class="card-text">Works perfectly on mobile, tablet, and desktop devices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Exam Section -->
+<section id="exam-section" class="py-5 hide bg-light">
+    <div class="container">
+        <div id="quiz-container" class="p-4 bg-white rounded shadow-sm">
+            <div id="question-container" class="mb-3">
+                <p id="question" class="fs-5 fw-bold"></p>
+            </div>
+            <div id="options-container" class="d-grid gap-3 mb-3">
+                <button class="btn btn-outline-primary option-btn" id="option0"></button>
+                <button class="btn btn-outline-primary option-btn" id="option1"></button>
+                <button class="btn btn-outline-primary option-btn" id="option2"></button>
+                <button class="btn btn-outline-primary option-btn" id="option3"></button>
+            </div>
+            <button id="next-btn" class="btn btn-success w-100">Next <i class="fas fa-arrow-right"></i></button>
+        </div>
+
+        <div id="result-container" class="hide text-center mt-4">
+            <h2 class="mb-3">Your Score: <span id="score"></span>/50</h2>
+            <button id="restart-btn" class="btn btn-primary btn-lg"><i class="fas fa-redo"></i> Restart Exam</button>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="mb-0">&copy; 2026 Computer Science Exit Exam. All Rights Reserved.</p>
+</footer>
+
+<!-- Bootstrap JS + Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="script.js"></script>
+<script>
+    const startBtn = document.getElementById("start-exam-btn");
+    const examSection = document.getElementById("exam-section");
+    startBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        examSection.classList.remove("hide");
+        window.scrollTo({top: examSection.offsetTop, behavior: 'smooth'});
+    });
+</script>
+
+</body>
+</html>
